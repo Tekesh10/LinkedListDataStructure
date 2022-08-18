@@ -14,6 +14,15 @@ public class LinkedList<T> {
             head = newNode;
         }
     }
+    public void add(T data) {
+        Node<T> newNode = new Node<>(data);
+        if(head == null) {
+            head = newNode;
+        }else{
+            tail.next = newNode;
+        }
+        tail = newNode;
+    }
     public void show(){
         if(head == null){
             System.out.println("Linked list is Empty");
