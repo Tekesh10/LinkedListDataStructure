@@ -74,6 +74,20 @@ public class LinkedList<T> {
         return null;
     }
 
+    public boolean searchAndInsert(T searchData, T insertData) {
+        Node<T> newNode = new Node<>(insertData);
+        Node<T> searchNode = search(searchData);
+        if (searchNode == null) {
+            return false;
+        } else {
+            Node<T> temp;
+            temp = tail;
+            searchNode.next = newNode;
+            newNode.next = temp;
+            return true;
+        }
+    }
+
     public void show() {
         if (head == null) {
             System.out.println("Linked list is Empty");
