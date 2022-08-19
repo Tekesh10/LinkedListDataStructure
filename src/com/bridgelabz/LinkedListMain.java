@@ -24,8 +24,14 @@ public class LinkedListMain {
 
         LinkedList<Integer> list2 = new LinkedList<>();
         list2.add(56);
-        list2.add(70);
         list2.add(30);
+        list2.add(70);
+        list2.show();
+        if (!list2.searchAndInsert(30, 40)) {
+            System.out.println("Element not  found");
+        } else {
+            System.out.println("Element found and inserted");
+        }
         list2.show();
         Integer popLastElement = list2.popLast();
         if (popLastElement == null) {
