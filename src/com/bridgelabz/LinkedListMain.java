@@ -8,6 +8,8 @@ public class LinkedListMain {
         list1.insert(30);
         list1.show();
 
+        System.out.println("\n");
+
         LinkedList<Integer> list2 = new LinkedList<>();
         list2.add(56);
         list2.add(70);
