@@ -14,6 +14,18 @@ public class LinkedList<T> {
         }
     }
 
+    public void add(T data) {
+        Node<T> newNode = new Node<>(data);
+        if (head == null) {
+            head = newNode;
+        } else {
+            tail.next = newNode;
+        }
+        tail = newNode;
+
+
+    }
+
     public void insert(T data) {
         Node<T> newNode = new Node<>(data);
         if (head == null) {
@@ -28,14 +40,21 @@ public class LinkedList<T> {
         }
     }
 
-    public void add(T data) {
-        Node<T> newNode = new Node<>(data);
+    public T popFirst() {
         if (head == null) {
+            return null;
+        } else {
+            T data = head.data;
+            head = head.next;
+            return data;
+        }
+
             head = newNode;
         } else {
             tail.next = newNode;
         }
         tail = newNode;
+
     }
 
     public void show() {
