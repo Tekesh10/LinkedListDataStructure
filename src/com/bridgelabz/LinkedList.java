@@ -72,6 +72,16 @@ public class LinkedList<T> {
         }
     }
 
+    public void searchAndPop(T searchAndDelete) {
+        Node<T> temp = head;
+        while (temp.next != null) {
+            if (temp.next.data.equals(searchAndDelete)) {
+                temp.next = temp.next.next;
+            }
+            temp = temp.next;
+        }
+    }
+
     public Node<T> search(T searchData) {
         Node<T> temp = head;
         while (temp != null) {
@@ -108,5 +118,15 @@ public class LinkedList<T> {
             }
             System.out.println();
         }
+    }
+
+    public void size() {
+        int size = 0;
+        Node<T> temp = head;
+        while (temp != null) {
+            temp = temp.next;
+            size++;
+        }
+        System.out.println("Size of Linked List is -> "+size);
     }
 }

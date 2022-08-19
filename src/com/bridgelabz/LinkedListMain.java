@@ -5,7 +5,7 @@ public class LinkedListMain {
         LinkedList<Integer> list1 = new LinkedList<>();
         list1.push(70);
         list1.push(56);
-        list1.insert(30);
+        list1.push(30);
         list1.show();
         Integer popFirstElement = list1.popFirst();
         if (popFirstElement == null) {
@@ -33,12 +33,16 @@ public class LinkedListMain {
             System.out.println("Element found and inserted");
         }
         list2.show();
-        Integer popLastElement = list2.popLast();
-        if (popLastElement == null) {
-            System.out.println("Linked List Empty");
-        } else {
-            System.out.println("Popped the last element -> "+popLastElement);
-        }
+        list2.searchAndPop(40);
         list2.show();
+        list2.size();
     }
 }
+
+//        list2.show();
+//        Integer popLastElement = list2.popLast();
+//        if (popLastElement == null) {
+//            System.out.println("Linked List Empty");
+//        } else {
+//            System.out.println("Popped the last element -> "+popLastElement);
+//        }
