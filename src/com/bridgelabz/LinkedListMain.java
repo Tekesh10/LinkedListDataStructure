@@ -7,7 +7,6 @@ public class LinkedListMain {
         list1.push(56);
         list1.insert(30);
         list1.show();
-
         Integer popFirstElement = list1.popFirst();
         if (popFirstElement == null) {
             System.out.println("Linked List Empty");
