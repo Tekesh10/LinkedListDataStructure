@@ -72,6 +72,17 @@ public class LinkedList<T> {
         }
     }
 
+    public Node<T> search(T searchData) {
+        Node<T> temp = head;
+        while (temp != null) {
+            if (temp.data.equals(searchData)) {
+                return temp;
+            }
+            temp = temp.next;
+        }
+        return null;
+    }
+
     public void show() {
         if (head == null) {
             System.out.println("Linked list is Empty");

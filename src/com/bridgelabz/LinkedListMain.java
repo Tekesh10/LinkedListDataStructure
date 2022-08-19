@@ -14,6 +14,11 @@ public class LinkedListMain {
             System.out.println("Popped the first element -> "+popFirstElement);
         }
         list1.show();
+        if (list1.search(30) == null) {
+            System.out.println("Element not  found");
+        } else {
+            System.out.println("Element found");
+        }
 
         System.out.println("\n");
 
