@@ -48,6 +48,16 @@ public class LinkedList<T> {
         }
     }
 
+    public T popAll() {
+        if (head == null) {
+            return null;
+        } else {
+            T data = head.data;
+            head = head.next;
+            return data;
+        }
+    }
+
     public T popLast() {
         if (head == null) {
             return null;
