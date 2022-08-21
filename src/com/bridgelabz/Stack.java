@@ -1,6 +1,8 @@
 package com.bridgelabz;
 
+
 public class Stack {
+
     LinkedList<Integer> stack = new LinkedList<>();
 
     public void push(Integer data) {
