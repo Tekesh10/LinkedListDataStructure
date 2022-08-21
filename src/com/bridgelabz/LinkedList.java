@@ -3,7 +3,7 @@ package com.bridgelabz;
 public class LinkedList<T> {
     Node<T> head;
     Node<T> tail;
-    public void push(T data) {
+    public void add(T data) {
         Node<T> newNode = new Node<>(data);
         if (head == null) {
             head = newNode;
@@ -14,7 +14,7 @@ public class LinkedList<T> {
         }
     }
 
-    public void add(T data) {
+    public void append(T data) {
         Node<T> newNode = new Node<>(data);
         if (head == null) {
             head = newNode;
@@ -39,16 +39,6 @@ public class LinkedList<T> {
     }
 
     public T popFirst() {
-        if (head == null) {
-            return null;
-        } else {
-            T data = head.data;
-            head = head.next;
-            return data;
-        }
-    }
-
-    public T popAll() {
         if (head == null) {
             return null;
         } else {
@@ -121,7 +111,7 @@ public class LinkedList<T> {
         }
     }
 
-    public void size() {
+    public int size() {
         int size = 0;
         Node<T> temp = head;
         while (temp != null) {
@@ -129,5 +119,6 @@ public class LinkedList<T> {
             size++;
         }
         System.out.println("Size of Linked List is -> "+size);
+        return size;
     }
 }
