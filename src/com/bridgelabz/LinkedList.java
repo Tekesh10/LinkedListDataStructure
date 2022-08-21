@@ -22,6 +22,8 @@ public class LinkedList<T> {
             tail.next = newNode;
         }
         tail = newNode;
+
+
     }
 
     public void insert(T data) {
@@ -46,6 +48,13 @@ public class LinkedList<T> {
             head = head.next;
             return data;
         }
+
+            head = newNode;
+        } else {
+            tail.next = newNode;
+        }
+        tail = newNode;
+
     }
 
     public T popLast() {
